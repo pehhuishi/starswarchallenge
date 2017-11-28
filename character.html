@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Star Wars : The Force Awakens</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
 </head>
 
 <body>
@@ -14,23 +15,23 @@
     <div class="container">
       <div class="navbar-translate">
         <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-bar"></span>
-              <span class="navbar-toggler-bar"></span>
-              <span class="navbar-toggler-bar"></span>
-        </button>
+                  <span class="navbar-toggler-bar"></span>
+                  <span class="navbar-toggler-bar"></span>
+                  <span class="navbar-toggler-bar"></span>
+              </button>
         <a class="navbar-brand" href="index.html">Star Wars</a>
       </div>
       <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="character.html" rel="tooltip" data-placement="bottom" href="#" target="_blank">
-              Characters
-            </a>
+                      Characters
+                    </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
-                          Gallery
-                        </a>
+            <a class="nav-link" href="gallery.html" rel="tooltip" data-placement="bottom" target="_blank">
+                        Gallery
+                    </a>
           </li>
         </ul>
       </div>
@@ -39,57 +40,67 @@
   <div class="wrapper">
     <div class="page-header section-dark" style="background-image: url('assets/images/wallpaper2.jpg')">
       <div class="content-center">
-        <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-
-
-
-
-          </div>
-          <div class="col-md-6">
-              <h3 class="tim-title">Profile</h3>
-              <div id="app">
-                <p>{{ people }}</p>
-
-                <div v-for="todo in images">
-                  <div v-if="random === todo.text">
-                    <img v-bind:src='todo.image' />
-                  </div>
-                </div>
-                <!-- <img :src="selectedImage" />
-                <p> Name : {{status.name}}</p>
-                <p> Gender : {{status.gender}}</p>
-                <p> Height : {{status.height}}</p>
-                <p> Mass : {{status.mass}}</p>
-                <p> Birthday : {{status.birth_year}}</p>
-
-              <h3>Appearances</h3>
-              <p> Hair Color : {{status.hair_color}}</p>
-              <p> Skin Color : {{status.skin_color}}</p>
-              <p> Eyes Color : {{status.eye_color}}</p> -->
+        <div id="app">
+          <div class="container">
+            <div class="row">
+              <div class="moving-clouds" style="background-image: url('assets/images/clouds.png'); ">
 
               </div>
+              <div class="col-md-6">
+                <div v-for="img in images">
+                  <div v-if="random === img.text">
 
+                    <img class="img-fluid" v-bind:src='img.image' />
 
+                    <div class="fog-low">
+                      <img src="assets/images/fog-low.png" alt="">
+                    </div>
+                    <div class="fog-low right">
+                      <img src="assets/images/fog-low.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div class="col-md-6">
+                <h3>Profile</h3>
+                <br>
+                <p> Name : {{people.name}}</p>
+                <p> Gender : {{people.gender}}</p>
+                <p> Height : {{people.height}}</p>
+                <p> Mass : {{people.mass}}</p>
+                <p> Birthday : {{people.birth_year}}</p>
+
+                <h3>Appearances</h3>
+                <br>
+                <p> Hair Color : {{people.hair_color}}</p>
+                <p> Skin Color : {{people.skin_color}}</p>
+                <p> Eyes Color : {{people.eye_color}}</p>
+
+              </div>
             </div>
-
           </div>
-
         </div>
-
-
-
       </div>
-      </div>
+      <h6 class="category category-absolute">Designed and coded by
+        <a href="https://github.com/pehhuishi" target="_blank">
+          Peh Hui Shi
+        </a>
+      </h6>
     </div>
+  </div>
+  </div>
   </div>
 
   <script src="https://unpkg.com/vue"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="assets/js/script.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/jquery-3.2.1.js" type="text/javascript"></script>
+
+
+
+
+
 </body>
 
 </html>
