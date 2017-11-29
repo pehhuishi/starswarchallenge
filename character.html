@@ -5,8 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Star Wars : The Force Awakens</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
 </head>
 
@@ -15,10 +16,10 @@
     <div class="container">
       <div class="navbar-translate">
         <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-bar"></span>
-                  <span class="navbar-toggler-bar"></span>
-                  <span class="navbar-toggler-bar"></span>
-              </button>
+              <span class="navbar-toggler-bar"></span>
+              <span class="navbar-toggler-bar"></span>
+              <span class="navbar-toggler-bar"></span>
+        </button>
         <a class="navbar-brand" href="index.html">Star Wars</a>
       </div>
       <div class="collapse navbar-collapse" id="navbarToggler">
@@ -50,7 +51,7 @@
                 <div v-for="img in images">
                   <div v-if="random === img.text">
 
-                    <img class="img-fluid" v-bind:src='img.image' />
+                    <img v-bind:src='img.image' />
 
                     <div class="fog-low">
                       <img src="assets/images/fog-low.png" alt="">
